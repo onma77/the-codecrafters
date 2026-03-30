@@ -9,28 +9,28 @@ func upperAll(p string) string {
 	return strings.ToUpper(p)
 }
 
-func lowerAll(p string) string{
-	return strings.ToLower(p)
+func lowerAll(d string) string{
+	return strings.ToLower(d)
 }
 
-func capFirst(p string) string{
-	return strings.Title(p)
+func capFirst(g string) string{
+	return strings.Title(g)
 }
 
-func Title(p string) string{
-	return strings.Title(p)
+func Title(o string) string{
+	return strings.Title(o)
 }
 
-func reverse(p string) string{
+func reverse(m string) string{
 	h := ""
-	for i := len(p) -1; i >= 0; i--{
-		h += string(p[i])
+	for i := len(m) -1; i >= 0; i--{
+		h += string(m[i])
 	}
 	return h
 }
 
-func snakeCase(p string) string{
-	b := strings.Fields(p)
+func snakeCase(r string) string{
+	b := strings.Fields(r)
 return strings.Join(b, "_")
 }
 func main() {
@@ -41,26 +41,35 @@ func main() {
 
 		// var k2 string
 		// fmt.Println("user input2")
-		// fmt.Scanln(&k2)
+		// fmt.Scanln(&k2) 
 
 		var operation string
-		fmt.Println("operation =\n upperAll,\n lowerAll,\n capFirst,\n Title,\n reverse,\n snakeCase")
+		fmt.Println("operation: \n1. upperAll \n2. lowerAll \n3. capFirst \n4. Title \n5. reverse \n6. snakeCase")
 		fmt.Scanln(&operation)
 
 		switch operation {
 
 	case "upperAll":
 
-	         fmt.Println(" ")
-	         fmt.Println(upperAll(text))
+	         fmt.Println(upperAll(""))
+	         fmt.Scanln(upperAll("text"))
 
 	case "lowerAll":
-	         fmt.Println(" ")
-	         fmt.Println(lowerAll(text))
-	// fmt.Println(capFirst( "director adaeze okonkwo"))
-	// fmt.Println(Title( "the fall of the western power grid" ))
-	// fmt.Println(snakeCase( "Alert! Level 5 detected."))
-	// fmt.Println(reverse("Lagos Nigeria"))
+	         fmt.Println(lowerAll(""))
+	         fmt.Scanln(lowerAll("text"))
+
+	case "capFirst":
+			fmt.Println(capFirst( ""))
+	        fmt.Println(capFirst( "text"))
+
+
+	case "Title":
+	fmt.Println(Title(""))
+	fmt.Println(Title("text"))
+
+	case "snakeCase":
+	 fmt.Println(snakeCase(""))
+	 fmt.Println(reverse("text"))
 }
 }
 }
