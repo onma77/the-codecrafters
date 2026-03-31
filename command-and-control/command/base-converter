@@ -1,0 +1,70 @@
+package main
+
+import (
+	"bufio"
+	"fmt"
+	"os"
+	"strconv"
+	"strings"
+)
+
+func main() {
+
+	scanner := bufio.NewScanner(os.Stdin)
+	fmt.Println("***** WELCOME TO MY CLI BASE CONVERTER *****")
+	fmt.Println("✦✦✦ USAGE :(number) (base) ✦✦✦")
+	fmt.Println("Supported:(number) (base) ✦✦✦")
+	fmt.Println("Supported commands:")
+	fmt.Println("  (number) (hex)  - hexadecimal")
+	fmt.Println("  (number) (bin) - binary")
+	fmt.Println("  (number) (dec) - decimal ")
+	fmt.Println("type 'exit' to quit :")
+	for {
+		if !scanner.Scan() {
+			break
+		}
+		line := strings.TrimSpace(scanner.Text())
+		if line == "" {
+			continue
+		}
+		if strings.ToLower(line) == "exit" {
+			fmt.Println("GOODBYE!!")
+			break
+		}
+		parts := strings.Fields(line)
+		if len(parts) != 2 {
+			fmt.Println("Error: Invalid format. Usage: <number> <base>")
+			continue
+		}
+		numStr := parts[0]
+		base := strings.ToLower(parts[1])
+		baseConversions(numStr, base)
+	}
+}
+func baseConversions(numstr, base string) {
+	var decimalvalue int64
+	var err error
+	switch base {
+	case "dec":
+		decimalvalue, err = strconv.ParseInt(numstr, 10, 64)
+	case "hex":
+		decimalvalue, err = strconv.ParseInt(numstr, 16, 64)
+	case "bin":
+		decimalvalue, err = strconv.ParseInt(numstr, 2, 64)
+	default:
+		fmt.Print("Error unsupported base. Available base : dec, hex, bin\n")
+		return
+	}
+	if err != nil {
+		fmt.Printf("Error: '%s' is not valid %s number.\n", numstr, base)
+	}
+	switch base {
+	case "dec":
+		binary := strconv.FormatInt(decimalvalue, 2)
+		hex := strings.ToUpper(strconv.FormatInt(decimalvalue, 16))
+		fmt.Printf("Binary:  %s\n", binary)
+		fmt.Printf("Hex:     %s\n", hex)
+	case "hex", "bin":
+		fmt.Printf("Decimal: %d\n", decimalvalue)
+	}
+}
