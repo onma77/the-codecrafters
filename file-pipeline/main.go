@@ -61,15 +61,15 @@ func TODO(h string) string {
 	return strings.Join(words, " ")
 }
 
-func dashBlank(d string) string {
-	d = strings.ReplaceAll(d, " ", "")
-	d = strings.ReplaceAll(d, "_", "")
+func dashBlank(m string) string {
+	m = strings.ReplaceAll(m, " ", "")
+	m = strings.ReplaceAll(, "_", "")
 
-	return d
+	return m
 	// if d == " " {
 	// 	return true
 	// }
-	// if
+	//if
 }
 
 // func trimSpace(s string) string {
