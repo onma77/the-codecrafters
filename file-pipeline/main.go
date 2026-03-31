@@ -63,7 +63,7 @@ func TODO(h string) string {
 
 func dashBlank(m string) string {
 	m = strings.ReplaceAll(m, " ", "")
-	m = strings.ReplaceAll(, "_", "")
+	m = strings.ReplaceAll(m, "_", "")
 
 	return m
 	// if d == " " {
