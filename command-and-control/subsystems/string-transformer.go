@@ -42,7 +42,7 @@ func Transform(cmd string, text string, last float64) (string, error) {
 			if small[line] {
 				text[i] = line
 			} else {
-				text[i] = strings.ToUpper(string(line[0])) + line[1:]
+				text[i] = strings.ToUpper(string(line[0])) + strings.ToLower(line[1:])
 			}
 			return strings.Join(text, " "), nil
 		}
