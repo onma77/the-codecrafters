@@ -76,7 +76,7 @@
 
         One of the most quiet members of the squad, she co-built the punctuation function and provided insight on the bugs that followed while actively testing for edge cases.
 
-    Celebrate Owulodown the right path and nudging
+    Celebrate Owulo
 
         If small but mighty were to be a person, it would be Celebrate. A silent genuis with a broad knowledge of the basics of programming, it is safe to say she manipulates logic for a living. Built the  Article function and helped in making vital decisions that shaped our code.
 
