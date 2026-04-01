@@ -21,10 +21,23 @@ func main() {
 	}
 
 	text := string(data)
+	result := textProcessor(text)
 	
 
-	err = os.WriteFile(outputFile, []byte(text), 0644)
+	err = os.WriteFile(outputFile, []byte(result), 0644)
 	if err != nil {
 		log.Fatal(err)
 	}
+}
+
+func textProcessor(text string) string{
+	text = conv(text)
+	text = cases(text)
+	text = fixarticles(text)
+	text = strConvert(text)
+	text = fixPunctuation(text)
+	text = fixQuotes(text)
+
+
+	return text + "\n"
 }

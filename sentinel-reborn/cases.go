@@ -33,7 +33,7 @@ func conv(text string) string {
 			words = append(words[:j], words[j+1:]...)
 			i--
 		}
-		if strings.Contains(words[i], "low") {
+		if strings.Contains(words[i], "(low,") {
 			j := i
 			car = words[j]
 			for _, r := range car {
@@ -52,7 +52,7 @@ func conv(text string) string {
 			words = append(words[:j], words[j+1:]...)
 			i--
 		}
-		if strings.Contains(words[i], "cap") {
+		if strings.Contains(words[i], "(cap,") {
 			j := i
 			car = words[j]
 			for _, r := range car {
