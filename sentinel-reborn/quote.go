@@ -2,6 +2,7 @@ package main
 
 import (
 	"regexp"
+	"strings"
 )
 
 func fixQuotes(text string) string {
@@ -10,6 +11,8 @@ func fixQuotes(text string) string {
 
 	text = p1.ReplaceAllString(text, "'")
 	text = p2.ReplaceAllString(text, "'")
+
+	text = strings.ReplaceAll(text, ":", ": ")
 
 	return text
 }
