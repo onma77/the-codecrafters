@@ -8,14 +8,14 @@ import (
 func ConvToHex(num string) string {
 	result, err := strconv.ParseInt(num, 16, 64)
 	if err != nil {
-		return "Invalid hex"
+		return num
 	}
 	return strconv.FormatInt(result, 10)
 }
 func ConvToBin(num string) string {
 	result, err := strconv.ParseInt(num, 2, 64)
 	if err != nil {
-		return "Invalid bin"
+		return num
 	}
 	return strconv.FormatInt(result, 10)
 }
