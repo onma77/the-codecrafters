@@ -90,7 +90,7 @@
 
     Nzekwe Chinazaekpere
 
-        An eloquent Benchmarker, ever ready to share her brilliant ideas. she understands the core basics of programming and she lives and breathes code. She buit the Quote function and was quick to jump at any bug that popped and we almost felt sorry for the bugs. A proper Benchmarker.
+        An eloquent Benchmarker, ever ready to share her brilliant ideas. She understands the core basics of programming and she lives and breathes code. She built the Quote function and was quick to jump at any bug that popped and we almost felt sorry for the bugs. A proper Benchmarker.
 
     Emaikwu Godwin
 
