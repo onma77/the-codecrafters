@@ -15,10 +15,13 @@ func fixarticles(s string) string {
 				words[i] = "an"
 			} else if word == "A" && strings.ContainsAny(vowels, string(string(words[i+1][0]))) {
 				words[i] = "An"
+			} else if word == "an" && !strings.ContainsAny(vowels, string(string(words[i+1][0]))) {
+				words[i] = "a"
 			}
-
 		}
+
 	}
+
 	return strings.Join(words, " ")
 
 }
