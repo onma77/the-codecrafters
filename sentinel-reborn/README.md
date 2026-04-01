@@ -82,7 +82,7 @@
 
     Alphonsus Ortse
 
-        Another silent wheel that makes the Bechmarking machine run smoothly, also an avid Arsenal fan with no trophy. he co-built the Article function and helped tackle edge cases while we battled forking the main.
+        Another silent wheel that makes the Benchmarking machine run smoothly, also an avid Arsenal fan with no trophy. He co-built the Article function and helped tackle edge cases while we battled forking the main.
 
     Endurance Ochefije
 
